@@ -1,0 +1,79 @@
+/*
+Theme Name: Vogel Paolo BASSO	
+Theme URI: 
+Author: Vogel Paolo BASSO
+Author URI: 
+Description: My first theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+Text Domain: 
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+
+/*****
+*I-STRUCTURE DE BASE DU SITE
+*II-HEADER
+*III-MAIN
+*IV-FOOTER
+****/
+
+/***********************************I- STRUCTURE DE BASE DU SITE***************************************************/
+/*@import url('bootstrap/css/bootstrap.css'); */
+/*@import url('bootstrap/css/bootstrap.min.css');*/
+body { 
+     padding-top: 80px; 
+     padding-bottom: 40px; 
+}
+/***********************************II-HEADER**********************************************************************/
+/****I-1 NAV Menu**************************/
+
+.navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+.navbar {min-height:20px !important}
+.navbar-inverse { background-color: #10DE62}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { background-color: #10DE62}
+.navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { color: #00FF99}
+.navbar-inverse { border-color: #35FC5D}
+
+/****I- 2 Logo**************************************/
+
+.logo{
+	width:150%;
+	height:100%;
+}
+
+
+/********************III -MAIN *********************************/
+	/**III-A Menu de gauche**/
+	
+/******************************NAV MENU LEFT************************************/
+#menu-menu-de-gauche{
+ list-style-type:none;
+ width:100%;
+}
+
+
+/*CONTENT SINGLE*/
+
+.single-content img{
+	display:block;
+	float:left;
+}
+.single-content {
+}
+
+
+/******HOME PAGE*****/
+.home-page-img{
+}
+.home-article-imgage{
+
+}
+.home-article-content{
+
+}
