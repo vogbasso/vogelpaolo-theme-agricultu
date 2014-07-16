@@ -54,8 +54,7 @@
 <?php wp_head(); ?>
  </head>
 <body <?php body_class(); ?>>
-
-    <div id="page" class="container">	
+    <div id="page" class="container-fluid">	
     	<header id="masthead" class="site-header" role="banner"> 
       		<nav id="site-header-navBar" class="navbar navbar-default navbar-fixed-top " role="navigation"> 
             	
@@ -91,4 +90,4 @@
             
         </header><!--#site-header-->
         
-        <div id="main"> 
+        <div id="main" class="container"> 
