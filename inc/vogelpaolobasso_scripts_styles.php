@@ -23,15 +23,26 @@
  function vogelpaolobasso_scripts(){
 	 //bootstrap jquery
 	
+	
+	
+	//Site Web Application Js
+	wp_register_script('site_application_js',get_template_directory_uri().'/js/site_js/applicationService.js',array('jquery'),'',true);
+	wp_enqueue_script('site_application_js');
+	wp_localize_script('site_application_js','vogelpaolobassoAjax',array('ajaxurl' => admin_url('admin-ajax.php')));
+	
+	//index.js
+	
 	//site_home_js
 	if(is_home()){ 
-	wp_register_script('site_home_js',get_template_directory_uri().'/js/site_js/home.js',array('jquery'));
+	wp_register_script('site_home_js',get_template_directory_uri().'/js/site_js/homeService.js',array('jquery'),'',true);
 	wp_enqueue_script('site_home_js');
 	} 
+	
+	
+	
  	//bootstrap
-	wp_register_script('bootstrap_js',get_template_directory_uri().'/bootstrap/js/bootstrap.min.js',array('jquery'));
+	wp_register_script('bootstrap_js',get_template_directory_uri().'/bootstrap/js/bootstrap.min.js',array('jquery'),'',true);
 	wp_enqueue_script('bootstrap_js');
-
 	
  }
  add_action( 'wp_enqueue_scripts', 'vogelpaolobasso_scripts' );

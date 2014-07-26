@@ -54,12 +54,37 @@
 <?php wp_head(); ?>
  </head>
 <body <?php body_class(); ?>>
-    <div id="page" class="container-fluid">	
-    	<header id="masthead" class="site-header" role="banner"> 
-      		<nav id="site-header-navBar" class="navbar navbar-default navbar-fixed-top " role="navigation"> 
-            	
+    <div id="site-page" class="container">	
+    	<header id="site-header" class="masthead" role="banner">
+			<nav id="site-header-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div id="site-header-1" class="row navbar-inverse">
+				<?php wp_nav_menu(array(
+					'menu'				=>'primary',
+                	'theme_location'    => 'primary',
+                	'depth'             => 3,
+                	'container'         => 'div',
+                	'container_class'   => 'collapse navbar-collapse',
+        			'container_id'		=> 'bs-example-navbar-collapse-1',
+                	'menu_class'        => 'nav navbar-nav',
+                	'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                	'walker'            => new wp_bootstrap_navwalker())); ?><!-- #site-header-1 -->
+				</div><!--#site-header-1-->
+				<div id="site-header-2" class="row">
+					<div class="container">
+					<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/images/header/logo1_NEW-OK.png';?>" class="img-responsive logo"/></a>
+					<form class="navbar-form navbar-left " role="search">
+                    	<div class="form-group">
+                        	<input type="text" class="form-control " placeholder="Search" size="60%">
+                        </div>
+                        <button type="submit" class="btn btn-default">Rechercher</button>
+					</form> 
+					</div>
+				</div><!-- #site-header-2 -->	
+			</nav>
+	 
+      		<!--<nav id="site-header-navBar" class="navbar navbar-default navbar-fixed-top " role="navigation">	
                 <div class="container-fluid navbar-inverse">
-            		<?php wp_nav_menu(array(
+            		<?php /*wp_nav_menu(array(
 						'menu'				=>'primary',
                 		'theme_location'    => 'primary',
                 		'depth'             => 3,
@@ -68,26 +93,20 @@
         				'container_id'		=> 'bs-example-navbar-collapse-1',
                 		'menu_class'        => 'nav navbar-nav ',
                 		'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                		'walker'            => new wp_bootstrap_navwalker())); ?>
+                		'walker'            => new wp_bootstrap_navwalker())); */?>
                 </div>
                 <div class="row">
-             	<div class="container">
-                	
-            		<a  class="navbar-brand" href="<?php echo home_url(); ?>"> 
-                    	<img src="<?php echo get_stylesheet_directory_uri().'/images/header/logo1_NEW-OK.png';?>" class="img-responsive logo"/></a>    
-                	<form class="navbar-form navbar-left " role="search">
+					<div class="container">
+						<a  class="navbar-brand" href="<?php //echo home_url(); ?>"><img src="<?php //echo get_stylesheet_directory_uri().'/images/header/logo1_NEW-OK.png';?>" class="img-responsive logo"/></a>    
+						<form class="navbar-form navbar-left " role="search">
                     	<div class="form-group">
                         	<input type="text" class="form-control " placeholder="Search" size="100%">
                         </div>
                          <button type="submit" class="btn btn-default">Rechercher</button>
-                    </form>
-            
-                </div>
-                
+						</form> 
+					</div>
                 </div>   
-            </nav>   
-            
-            
-        </header><!--#site-header-->
+            </nav>-->   
+        </header><!-- #site-header -->
         
         <div id="main" class="container"> 

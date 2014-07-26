@@ -12,6 +12,12 @@
  */
  require( get_template_directory() . '/inc/custom-header.php' );
  
+ 
+ /**
+  * Add Ajax php functions
+  */
+ require(get_template_directory().'inc/vogelpaolobasso_ajax.php');
+ 
  /**
  * Return the Google font stylesheet URL if available.
  *
