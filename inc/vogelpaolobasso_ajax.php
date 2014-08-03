@@ -18,6 +18,9 @@ function vogelpaolobasso_ajaxRequest(){
 		case 'getPosts':
 			$output=vogelpaolobasso_get_posts($_REQUEST['count']);
 		break;
+		case 'getPost':
+			$output=vogelpaolobasso_get_post();
+		break;
 		default:
 			$output = 'No function specified, check your jQuery.ajax() call';
 		break;
@@ -32,7 +35,6 @@ function vogelpaolobasso_ajaxRequest(){
 		//echo $output;
 	//}	
 	die('Ok cool');
-
 }
 
 function vogelpaolobasso_get_posts($count){
@@ -41,3 +43,7 @@ function vogelpaolobasso_get_posts($count){
 	return $posts;
 }
 
+function vogelpaolobasso_get_post(){
+	$post=get_post();
+	return $post;
+}

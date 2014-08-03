@@ -60,11 +60,10 @@ body {
 
 /*CONTENT SINGLE*/
 
-.single-content img{
-	display:block;
-	float:left;
+#article-single-content{
 }
-.single-content {
+#article-single-content-text img {
+	display:none;
 }
 
 
@@ -78,4 +77,10 @@ body {
 .home-author{
 color:#008080;
 }
+li.media{}
+/*************SINGLE PAGE******************/
 
+#single-content img{
+	margin-left:auto;
+	margin-right:auto;
+}

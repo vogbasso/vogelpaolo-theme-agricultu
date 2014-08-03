@@ -39,10 +39,15 @@ function vogelpaolobasso_scripts(){
 	wp_register_script('vogelpaolobasso_home_js',get_template_directory_uri().'/js/vogelpaolobasso_js/homeService.js',array('jquery','vogelpaolobasso_application_js'),'1.0.0',true);
 	wp_enqueue_script('vogelpaolobasso_home_js');
 	} 
-		
+	
+	//site_single_js
+	if(is_single()){
+	wp_register_script('vogelpaolobasso_single_js',get_template_directory_uri().'/js/vogelpaolobasso_js/singleService.js',array('jquery','vogelpaolobasso_application_js'),'1.0.0',true);
+ 	wp_enqueue_script('vogelpaolobasso_single_js');
+	}
+	
  	//bootstrap
 	wp_register_script('bootstrap_js',get_template_directory_uri().'/bootstrap/js/bootstrap.min.js',array('jquery'),'',true);
 	wp_enqueue_script('bootstrap_js');	
 }
 add_action( 'wp_enqueue_scripts', 'vogelpaolobasso_scripts' );
- 

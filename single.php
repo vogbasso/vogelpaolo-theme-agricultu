@@ -1,12 +1,14 @@
-<?php get_header(); ?>
-	
-	
+<?php get_header(); ?>	
 	<div id="container" class="content-area">
     	<?php get_sidebar('left');?>
-		<div id="content" class="site-content col-md-8" role="main">
+		<div id="content single-content" class="site-content col-md-8" role="main">
 
 			<?php /* The loop */ if(have_posts()):?>
 			<?php while ( have_posts() ) : the_post(); ?>
+				<script>
+					var vogelpaolobassoSingle={};
+					vogelpaolobassoSingle.ID="<?php the_ID();?>";
+				</script>
   				<?php get_template_part( 'content'); ?>
 				<?php vogelpaolobasso_post_nav(); ?>
 			<?php endwhile;

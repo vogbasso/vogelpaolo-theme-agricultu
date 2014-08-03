@@ -11,21 +11,23 @@
  	</li>
  	
 <?php elseif(is_single()):?>    
-   <article id="post-<?php the_ID();?>" <?php post_class('row');?>> 
+   <article id="post-<?php the_ID();?>"<?php post_class('row');?>> 
       <div class="block-center">
-         <header class="entry-header single-header">
+         <header class="entry-header single-header page-header">
          	<h3 class="text-primary text-center"><?php the_title(); ?></h3>
          </header>
-         
-         		<div class="entry-content single-content text-justify">
-                
-         			<p><?php the_content();?></p>
+					
+         		<div id="article-single-content" class="text-justify thumbnail">
+         			<?php the_post_thumbnail('large');?>
+         			<div id="article-single-content-text" class="container-fluid">
+						<p ><?php the_content();?></p>
+					</div>
          		</div>
          		<footer class="entry-footer single-footer text-left">
-         			<?php the_author();?>
+         			<?php //the_author();?>
          		</footer>
          	</div><!--.block-center-->
-         </article>
+   </article>
          
          <?php elseif(is_category()):?>
    	<li id="post-<?php the_ID();?>" <?php post_class('media');?>>		
